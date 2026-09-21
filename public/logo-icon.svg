@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Rounded Shield Outline -->
+  <path
+    d="M 50 12
+       C 67 12 79 15 84 26
+       C 88 38 87 56 77 72
+       C 67 86 56 91 50 92
+       C 44 91 33 86 23 72
+       C 13 56 12 38 16 26
+       C 21 15 33 12 50 12 Z"
+    stroke="#00C9C8"
+    stroke-width="7.5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+
+  <!-- Circular Dial Arc with Gap on Right -->
+  <!-- Arc starts at approx (64, 36) [~1:30 o'clock], goes counter-clockwise to (64, 64) [~4:30 o'clock] -->
+  <path
+    d="M 64.5 35.5
+       A 20.5 20.5 0 1 0 64.5 64.5"
+    stroke="#FFFFFF"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+  <!-- Needle Pointing to Upper Right (~45 deg) -->
+  <polygon
+    points="63,37 53,47 37,63 47,53"
+    fill="#00C9C8"
+  />
+</svg>

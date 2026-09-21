@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------
+ * Government Official Documentation & Report Print Stylesheet
+ * Optimized for standard A4 high-contrast laser printing
+ * ------------------------------------------------------------- */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 15mm 12mm;
+  }
+
+  /* Reset layout & backgrounds for crisp paper contrast */
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive web chrome & unnecessary navigation */
+  header,
+  nav,
+  aside,
+  footer,
+  #header,
+  .sidebar,
+  .no-print,
+  button:not(.print-include),
+  input,
+  select,
+  .fixed:not(.print-include),
+  .sticky,
+  .modal-overlay,
+  [role="dialog"]:not(.print-include) {
+    display: none !important;
+  }
+
+  /* Main container expand to full width and allow multi-page expansion */
+  body, #root, .flex-1, div {
+    overflow: visible !important;
+  }
+
+  main, .printable-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Invert dark theme cards for clean printing */
+  .bg-zinc-900, .bg-zinc-950, .bg-slate-900, .bg-slate-800 {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    color: #0f172a !important;
+  }
+
+  .text-white, .text-zinc-100, .text-zinc-200 {
+    color: #0f172a !important;
+  }
+
+  .text-zinc-400, .text-zinc-500, .text-slate-400 {
+    color: #475569 !important;
+  }
+
+  .border-zinc-800, .border-zinc-700 {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Print pagination & break controls */
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Ensure tables render with clean borders */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid #94a3b8 !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: bold !important;
+  }
+
+  /* High contrast colors for status tags */
+  .text-emerald-400, .text-emerald-500 {
+    color: #065f46 !important;
+  }
+
+  .text-amber-400, .text-amber-500 {
+    color: #92400e !important;
+  }
+
+  .text-rose-400, .text-rose-500 {
+    color: #991b1b !important;
+  }
+
+  .text-indigo-400, .text-indigo-600 {
+    color: #3730a3 !important;
+  }
+}

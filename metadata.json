@@ -1,0 +1,6 @@
+{
+  "name": "BudgetAI Gov – AI-Based Budget Utilization Monitoring System",
+  "description": "Enterprise AI-powered budget utilization monitoring, expenditure tracking, anomaly detection, and decision-support system for government departments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
